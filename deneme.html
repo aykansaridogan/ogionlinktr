@@ -1,0 +1,191 @@
+<html lang="zxx" class="theme-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogion</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #007bff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container99 {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo99 img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom99 {
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Öğeleri birbirinden uzaklaştırır */
+        }
+
+        .btn-custom99 img {
+            max-height: 30px;
+            vertical-align: middle;
+        }
+
+        .btn-custom99:hover {
+            background-color: #0056b3;
+        }
+
+        .social {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social li {
+            margin: 0 10px;
+        }
+
+        .social li a {
+            font-size: 1.5rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .social li a:hover {
+            color: #0056b3;
+        }
+
+        .background-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .background-svg text {
+            font-size: 50px;
+            fill: rgba(0, 123, 255, 0.4); /* Daha belirgin hale getirildi */
+            animation: move 10s linear infinite, colorChange 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(100px, 100px);
+            }
+
+            100% {
+                transform: translate(-100px, -100px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                fill: rgba(0, 123, 255, 0.4);
+            }
+
+            25% {
+                fill: rgba(220, 53, 69, 0.4);
+            }
+
+            50% {
+                fill: rgba(40, 167, 69, 0.4);
+            }
+
+            75% {
+                fill: rgba(255, 193, 7, 0.4);
+            }
+
+            100% {
+                fill: rgba(0, 123, 255, 0.4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="background-svg">
+        <text x="10%" y="20%">O</text>
+        <text x="50%" y="40%">G</text>
+        <text x="30%" y="70%">İ</text>
+        <text x="80%" y="60%">O</text>
+        <text x="60%" y="90%">N</text>
+    </svg>
+
+    <div class="container99">
+        <div class="logo99">
+            <img src="logo.jpeg" alt="Ogion">
+        </div>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/ogion" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.twitter.com/ogion" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ogion/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/ogion/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <div class="d-grid gap-2">
+            <a href="https://www.trendyol.com/magaza/ogion-m-960098?sst=0" target="_blank" class="btn btn-custom99">
+                <img src="https://ugc.production.linktr.ee/c480e397-697a-4e83-8a2e-4a116a1bb49f_IMG-1881.png?io=true&size=thumbnail-stack-v1_0" alt="Trendyol Logo">
+                <span>Trendyol</span>
+            </a>
+            <a href="https://www.hepsiburada.com/magaza/ogion?ftid=jmkseq2qp4dmkri3" target="_blank" class="btn btn-custom99">
+                <img src="https://ugc.production.linktr.ee/82924a94-3730-4687-86ee-93a43d9b99f3_IMG-1882.jpeg?io=true&size=thumbnail-stack-v1_0" alt="Hepsiburada Logo">
+                <span>Hepsiburada</span>
+            </a>
+            <a href="https://ogion.com/" target="_blank" class="btn btn-custom99">
+                <i class="fas fa-sitemap"></i>
+                <span>Website</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const texts = document.querySelectorAll('.background-svg text');
+
+        function randomMovement() {
+            texts.forEach(text => {
+                const randomX = Math.random() * 100;
+                const randomY = Math.random() * 100;
+                text.setAttribute('x', `${randomX}%`);
+                text.setAttribute('y', `${randomY}%`);
+            });
+        }
+
+        setInterval(randomMovement, 5000);
+    </script>
+</body>
+
+</html>
