@@ -50,12 +50,17 @@
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start; /* Sol tarafa hizalanacak */
+            gap: 10px; /* Logo ile yazı arasında boşluk */
         }
 
         .btn-custom99 img {
             max-height: 30px;
             vertical-align: middle;
+        }
+
+        .btn-custom99 i {
+            font-size: 20px;
         }
 
         .btn-custom99:hover {
@@ -161,13 +166,13 @@
 
         @media (max-width: 480px) {
             .btn-custom99 {
-                flex-direction: column;
+                font-size: 12px;
                 padding: 10px;
+                gap: 8px;
             }
 
             .btn-custom99 img {
                 max-height: 20px;
-                margin-bottom: 5px;
             }
 
             .social li a {
