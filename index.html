@@ -50,7 +50,7 @@
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Öğeleri birbirinden uzaklaştırır */
+            justify-content: space-between;
         }
 
         .btn-custom99 img {
@@ -95,7 +95,7 @@
 
         .background-svg text {
             font-size: 50px;
-            fill: rgba(0, 123, 255, 0.4); /* Daha belirgin hale getirildi */
+            fill: rgba(0, 123, 255, 0.4);
             animation: move 10s linear infinite, colorChange 5s linear infinite;
         }
 
@@ -132,6 +132,46 @@
 
             100% {
                 fill: rgba(0, 123, 255, 0.4);
+            }
+        }
+
+        /* Responsive Düzenlemeler */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+                height: auto;
+            }
+
+            .container99 {
+                max-width: 100%;
+                padding: 10px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .btn-custom99 {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .background-svg text {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-custom99 {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .btn-custom99 img {
+                max-height: 20px;
+                margin-bottom: 5px;
+            }
+
+            .social li a {
+                font-size: 1.2rem;
             }
         }
     </style>
